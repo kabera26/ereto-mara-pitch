@@ -3,6 +3,7 @@ import heroImage from './assets/mara1.jpg';
 import campfireImage from './assets/campfire.jpg';
 import tentImage from './assets/tent.jpg';
 
+// Activities images
 import manyatta from './assets/manyatta.jpg';
 import balloon from './assets/hotair-balloon.jpg';
 import drive1 from './assets/landcruiser-drive1.jpg';
@@ -10,6 +11,7 @@ import drive2 from './assets/landcruiser-drive2.jpg';
 import cheetah from './assets/cheetah.jpg';
 import lion from './assets/lion.jpg';
 
+// Gallery images (ALL)
 import tent2 from './assets/tent2.jpg';
 import wildebeest from './assets/wildebeest.jpg';
 
@@ -19,7 +21,7 @@ function App() {
   return (
     <div style={{ fontFamily: "'Segoe UI', sans-serif" }}>
 
-      {/* FLOATING WHATSAPP BUTTON */}
+      {/* WHATSAPP BUTTON (FIXED) */}
       <a
         href="https://wa.me/27821234567"
         target="_blank"
@@ -30,16 +32,17 @@ function App() {
           right: '20px',
           backgroundColor: '#25D366',
           color: 'white',
-          padding: '15px',
+          padding: '14px',
           borderRadius: '50%',
-          fontSize: '24px',
-          zIndex: 1000
+          fontSize: '22px',
+          zIndex: 9999,
+          boxShadow: '0 4px 10px rgba(0,0,0,0.3)'
         }}
       >
         <FaWhatsapp />
       </a>
 
-      {/* HERO (FULL SCREEN) */}
+      {/* HERO */}
       <section
         style={{
           height: '100vh',
@@ -49,8 +52,7 @@ function App() {
           justifyContent: 'center',
           alignItems: 'center',
           color: 'white',
-          textAlign: 'center',
-          padding: '20px'
+          textAlign: 'center'
         }}
       >
         <h1 style={{ fontSize: '3rem' }}>Ereto Mara Paradise Camp</h1>
@@ -95,8 +97,8 @@ function App() {
         </div>
       </section>
 
-      {/* ACTIVITIES */}
-      <section style={{ padding: '60px 20px', textAlign: 'center', background: '#f1f5f9' }}>
+      {/* ACTIVITIES (DARK MODE 🔥) */}
+      <section style={{ padding: '60px 20px', textAlign: 'center', background: '#0f172a', color: 'white' }}>
         <h2>Experiences & Activities</h2>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
@@ -110,26 +112,43 @@ function App() {
             { img: drive2, text: "Extended Safari Drives" }
           ].map((item, i) => (
             <div key={i} style={{ width: '250px' }}>
-              <img src={item.img} style={{ width: '100%', borderRadius: '10px' }} />
-              <p>{item.text}</p>
+              <img
+                src={item.img}
+                style={{
+                  width: '100%',
+                  borderRadius: '10px',
+                  transition: '0.3s',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={e => {
+                  e.target.style.transform = 'scale(1.05)';
+                  e.target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.5)';
+                }}
+                onMouseLeave={e => {
+                  e.target.style.transform = 'scale(1)';
+                  e.target.style.boxShadow = 'none';
+                }}
+              />
+              <p style={{ marginTop: '10px' }}>{item.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* GALLERY (FIXED + COMPLETE) */}
       <section style={{ padding: '60px 20px', textAlign: 'center' }}>
         <h2>Gallery</h2>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
-          {[tentImage, tent2, wildebeest, campfireImage].map((img, i) => (
+          {[tentImage, tent2, wildebeest, campfireImage, cheetah, lion].map((img, i) => (
             <img
               key={i}
               src={img}
               style={{
                 width: '250px',
                 borderRadius: '10px',
-                transition: '0.3s'
+                transition: '0.3s',
+                cursor: 'pointer'
               }}
               onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
               onMouseLeave={e => e.target.style.transform = 'scale(1)'}
@@ -140,7 +159,7 @@ function App() {
 
       {/* FOOTER */}
       <footer style={{ padding: '30px', textAlign: 'center', background: '#1e293b', color: 'white' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', fontSize: '1.4rem' }}>
           <FaFacebookF />
           <FaInstagram />
           <FaTwitter />
