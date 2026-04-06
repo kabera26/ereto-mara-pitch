@@ -1,27 +1,41 @@
 import React from 'react';
 import heroImage from './assets/mara1.jpg';
-import campfireImage from './assets/campfire.jpg';
-import tentImage from './assets/tent.jpg';
 
-// Activities images
-import manyatta from './assets/manyatta.jpg';
-import balloon from './assets/hotair-balloon.jpg';
-import drive1 from './assets/landcruiser-drive1.jpg';
-import drive2 from './assets/landcruiser-drive2.jpg';
-import cheetah from './assets/cheetah.jpg';
-import lion from './assets/lion.jpg';
-
-// Gallery images (ALL)
+// Accommodation (tents)
+import tent1 from './assets/tent.jpg';
 import tent2 from './assets/tent2.jpg';
+
+// Rooms
+import room1 from './assets/room.jpg';
+import room2 from './assets/room2.jpg';
+
+// Guests
+import guest1 from './assets/guest.jpg';
+import guest2 from './assets/guests2.jpg';
+
+// Experience
+import campfire from './assets/campfire.jpg';
+import manyatta from './assets/manyatta.jpg';
+
+// Wildlife
+import lion from './assets/lion.jpg';
+import cheetah from './assets/cheetah.jpg';
 import wildebeest from './assets/wildebeest.jpg';
 
-import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
+// Safari
+import drive1 from './assets/landcruiser-drive1.jpg';
+import drive2 from './assets/landcruiser-drive2.jpg';
+
+// Balloon
+import balloon from './assets/hotair-balloon.jpg';
+
+import { FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   return (
     <div style={{ fontFamily: "'Segoe UI', sans-serif" }}>
 
-      {/* WHATSAPP BUTTON (FIXED) */}
+      {/* WHATSAPP */}
       <a
         href="https://wa.me/27821234567"
         target="_blank"
@@ -30,142 +44,96 @@ function App() {
           position: 'fixed',
           bottom: '20px',
           right: '20px',
-          backgroundColor: '#25D366',
+          background: '#25D366',
           color: 'white',
           padding: '14px',
           borderRadius: '50%',
-          fontSize: '22px',
-          zIndex: 9999,
-          boxShadow: '0 4px 10px rgba(0,0,0,0.3)'
+          zIndex: 9999
         }}
       >
         <FaWhatsapp />
       </a>
 
       {/* HERO */}
-      <section
-        style={{
-          height: '100vh',
-          background: `url(${heroImage}) no-repeat center/cover`,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          color: 'white',
-          textAlign: 'center'
-        }}
-      >
-        <h1 style={{ fontSize: '3rem' }}>Ereto Mara Paradise Camp</h1>
-        <p>Experience the Wild in Comfort and Style 🌿</p>
-      </section>
-
-      {/* LOCATION */}
-      <section style={{ padding: '60px 20px', textAlign: 'center' }}>
-        <h2>Location & Accessibility</h2>
-        <p style={{ maxWidth: '700px', margin: '0 auto' }}>
-          Ereto Mara Paradise Camp is located in the heart of the Maasai Mara, within the Enashulai Conservancy.
-          <br /><br />
-          Just 100m from the main road and only a 10-minute drive to Sekenani Main Gate,
-          offering both convenience and an authentic wilderness experience.
-        </p>
-      </section>
-
-      {/* RATES */}
-      <section style={{ padding: '60px 20px', textAlign: 'center' }}>
-        <h2>Accommodation Rates (Full Board)</h2>
-
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap' }}>
-          <div>
-            <h3>🌞 High Season</h3>
-            <p>Single — $100</p>
-            <p>Double — $140</p>
-            <p>Twin — $140</p>
-            <p>Triple — $185</p>
-            <p>AirBnB — $140</p>
-            <p>Tent — $12</p>
-          </div>
-
-          <div>
-            <h3>🌿 Low Season</h3>
-            <p>Single — $62</p>
-            <p>Double — $93</p>
-            <p>Twin — $93</p>
-            <p>Triple — $140</p>
-            <p>AirBnB — $100</p>
-            <p>Tent — $12</p>
-          </div>
+      <section style={{
+        height: '100vh',
+        background: `url(${heroImage}) center/cover`,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: 'white',
+        textAlign: 'center'
+      }}>
+        <div>
+          <h1>Ereto Mara Paradise Camp</h1>
+          <p>Experience the Wild in Comfort and Style 🌿</p>
         </div>
       </section>
 
-      {/* ACTIVITIES (DARK MODE 🔥) */}
-      <section style={{ padding: '60px 20px', textAlign: 'center', background: '#0f172a', color: 'white' }}>
+      {/* ACTIVITIES */}
+      <section style={{ padding: '60px 20px', background: '#0f172a', color: 'white', textAlign: 'center' }}>
         <h2>Experiences & Activities</h2>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px' }}>
           {[
-            { img: manyatta, text: "Maasai Manyatta Visit" },
-            { img: campfireImage, text: "Bonfire Experience 🔥" },
-            { img: cheetah, text: "Nature Walks" },
-            { img: lion, text: "Museum Visits" },
-            { img: balloon, text: "Hot Air Balloon 🎈" },
-            { img: drive1, text: "Game Drive 🐘" },
-            { img: drive2, text: "Extended Safari Drives" }
+            { img: manyatta, text: "Maasai Cultural Experience" },
+            { img: campfire, text: "Bonfire Dining Experience 🔥" },
+            { img: drive1, text: "Game Drives 🐘" },
+            { img: balloon, text: "Hot Air Balloon Safari 🎈" }
           ].map((item, i) => (
-            <div key={i} style={{ width: '250px' }}>
-              <img
-                src={item.img}
-                style={{
-                  width: '100%',
-                  borderRadius: '10px',
-                  transition: '0.3s',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={e => {
-                  e.target.style.transform = 'scale(1.05)';
-                  e.target.style.boxShadow = '0 10px 20px rgba(0,0,0,0.5)';
-                }}
-                onMouseLeave={e => {
-                  e.target.style.transform = 'scale(1)';
-                  e.target.style.boxShadow = 'none';
-                }}
-              />
-              <p style={{ marginTop: '10px' }}>{item.text}</p>
+            <div key={i} style={{ width: '260px' }}>
+              <img src={item.img} style={{ width: '100%', borderRadius: '10px' }} />
+              <p>{item.text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* GALLERY (FIXED + COMPLETE) */}
+      {/* GALLERY */}
       <section style={{ padding: '60px 20px', textAlign: 'center' }}>
         <h2>Gallery</h2>
 
+        {/* ROOMS */}
+        <h3>🛏️ Rooms</h3>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
-          {[tentImage, tent2, wildebeest, campfireImage, cheetah, lion].map((img, i) => (
-            <img
-              key={i}
-              src={img}
-              style={{
-                width: '250px',
-                borderRadius: '10px',
-                transition: '0.3s',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
-              onMouseLeave={e => e.target.style.transform = 'scale(1)'}
-            />
+          {[room1, room2].map((img, i) => (
+            <img key={i} src={img} style={{ width: '250px', borderRadius: '10px' }} />
           ))}
         </div>
-      </section>
 
-      {/* FOOTER */}
-      <footer style={{ padding: '30px', textAlign: 'center', background: '#1e293b', color: 'white' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', fontSize: '1.4rem' }}>
-          <FaFacebookF />
-          <FaInstagram />
-          <FaTwitter />
+        {/* TENTS */}
+        <h3 style={{ marginTop: '40px' }}>🏕️ Tented Accommodation</h3>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
+          {[tent1, tent2].map((img, i) => (
+            <img key={i} src={img} style={{ width: '250px', borderRadius: '10px' }} />
+          ))}
         </div>
-        <p>© 2026 Ereto Mara Paradise Camp</p>
-      </footer>
+
+        {/* GUEST EXPERIENCE */}
+        <h3 style={{ marginTop: '40px' }}>👥 Guest Experience</h3>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
+          {[guest1, guest2, campfire].map((img, i) => (
+            <img key={i} src={img} style={{ width: '250px', borderRadius: '10px' }} />
+          ))}
+        </div>
+
+        {/* WILDLIFE */}
+        <h3 style={{ marginTop: '40px' }}>🐾 Wildlife</h3>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
+          {[lion, cheetah, wildebeest].map((img, i) => (
+            <img key={i} src={img} style={{ width: '250px', borderRadius: '10px' }} />
+          ))}
+        </div>
+
+        {/* SAFARI */}
+        <h3 style={{ marginTop: '40px' }}>🚙 Safari Experience</h3>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
+          {[drive1, drive2].map((img, i) => (
+            <img key={i} src={img} style={{ width: '250px', borderRadius: '10px' }} />
+          ))}
+        </div>
+
+      </section>
 
     </div>
   );
