@@ -3,7 +3,6 @@ import heroImage from './assets/mara1.jpg';
 import campfireImage from './assets/campfire.jpg';
 import tentImage from './assets/tent.jpg';
 
-// Activities
 import manyatta from './assets/manyatta.jpg';
 import balloon from './assets/hotair-balloon.jpg';
 import drive1 from './assets/landcruiser-drive1.jpg';
@@ -11,35 +10,61 @@ import drive2 from './assets/landcruiser-drive2.jpg';
 import cheetah from './assets/cheetah.jpg';
 import lion from './assets/lion.jpg';
 
-// Gallery (use any of these images)
 import tent2 from './assets/tent2.jpg';
 import wildebeest from './assets/wildebeest.jpg';
 
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 function App() {
   return (
     <div style={{ fontFamily: "'Segoe UI', sans-serif" }}>
 
-      {/* HERO */}
-      <section style={{
-        padding: '60px 20px',
-        textAlign: 'center',
-        background: `url(${heroImage}) no-repeat center/cover`,
-        color: 'white'
-      }}>
-        <h1>Ereto Mara Paradise Camp</h1>
+      {/* FLOATING WHATSAPP BUTTON */}
+      <a
+        href="https://wa.me/27821234567"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          backgroundColor: '#25D366',
+          color: 'white',
+          padding: '15px',
+          borderRadius: '50%',
+          fontSize: '24px',
+          zIndex: 1000
+        }}
+      >
+        <FaWhatsapp />
+      </a>
+
+      {/* HERO (FULL SCREEN) */}
+      <section
+        style={{
+          height: '100vh',
+          background: `url(${heroImage}) no-repeat center/cover`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: 'white',
+          textAlign: 'center',
+          padding: '20px'
+        }}
+      >
+        <h1 style={{ fontSize: '3rem' }}>Ereto Mara Paradise Camp</h1>
         <p>Experience the Wild in Comfort and Style 🌿</p>
       </section>
 
       {/* LOCATION */}
-      <section style={{ padding: '50px 20px', textAlign: 'center' }}>
+      <section style={{ padding: '60px 20px', textAlign: 'center' }}>
         <h2>Location & Accessibility</h2>
         <p style={{ maxWidth: '700px', margin: '0 auto' }}>
           Ereto Mara Paradise Camp is located in the heart of the Maasai Mara, within the Enashulai Conservancy.
           <br /><br />
           Just 100m from the main road and only a 10-minute drive to Sekenani Main Gate,
-          the camp offers both convenience and an authentic wilderness experience.
+          offering both convenience and an authentic wilderness experience.
         </p>
       </section>
 
@@ -50,22 +75,22 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap' }}>
           <div>
             <h3>🌞 High Season</h3>
-            <p>Single Room — $100</p>
-            <p>Double Room — $140</p>
-            <p>Twin Room — $140</p>
-            <p>Triple Room — $185</p>
+            <p>Single — $100</p>
+            <p>Double — $140</p>
+            <p>Twin — $140</p>
+            <p>Triple — $185</p>
             <p>AirBnB — $140</p>
-            <p>Tent — $12 / person</p>
+            <p>Tent — $12</p>
           </div>
 
           <div>
             <h3>🌿 Low Season</h3>
-            <p>Single Room — $62</p>
-            <p>Double Room — $93</p>
-            <p>Twin Room — $93</p>
-            <p>Triple Room — $140</p>
+            <p>Single — $62</p>
+            <p>Double — $93</p>
+            <p>Twin — $93</p>
+            <p>Triple — $140</p>
             <p>AirBnB — $100</p>
-            <p>Tent — $12 / person</p>
+            <p>Tent — $12</p>
           </div>
         </div>
       </section>
@@ -104,8 +129,7 @@ function App() {
               style={{
                 width: '250px',
                 borderRadius: '10px',
-                transition: '0.3s',
-                cursor: 'pointer'
+                transition: '0.3s'
               }}
               onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
               onMouseLeave={e => e.target.style.transform = 'scale(1)'}
