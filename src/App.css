@@ -1,99 +1,146 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
-  color: #333;
+  background: #f5f5f5;
+  color: #222;
 }
 
+/* HERO */
 .hero {
-  position: relative;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+  border-radius: 12px;
   text-align: center;
-}
-
-.hero-img {
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-}
-
-.hero-text {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
   color: white;
-  text-shadow: 0 0 10px black;
 }
 
-.whatsapp-button {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin-top: 5px;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #25D366;
   color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.2s;
 }
 
-.whatsapp-button:hover {
-  transform: scale(1.1);
+.whatsapp-btn:hover {
+  background: #1ebe5d;
 }
 
-.rates table {
-  width: 90%;
-  margin: 20px auto;
-  border-collapse: collapse;
-}
-
-.rates th, .rates td {
-  border: 1px solid #ccc;
-  padding: 10px;
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
   text-align: center;
 }
 
-.activities {
-  background-color: #222;
+.section.dark {
+  background: #111;
   color: white;
-  padding: 40px 20px;
 }
 
-.activities-grid {
+/* GRID */
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.activities-grid img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.activities-grid img:hover {
-  transform: scale(1.05);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 15px;
-  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.gallery-item img {
+.grid img {
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.gallery-item img:hover {
+.grid img:hover {
   transform: scale(1.05);
 }
 
-footer {
-  text-align: center;
+/* RATES */
+.rates-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rate-box {
+  background: white;
   padding: 20px;
-  background-color: #111;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* BOOKING */
+.booking-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.booking-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.booking-box button {
+  padding: 10px;
+  background: #25D366;
+  border: none;
   color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* FOOTER */
+.footer {
+  background: black;
+  color: white;
+  padding: 20px;
 }
