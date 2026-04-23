@@ -1,180 +1,100 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #222;
-}
-
-/* HERO SECTION */
-.hero {
-  height: 90vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.55);
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
+  background: #0b0b0b;
   color: white;
-  max-width: 600px;
+  overflow-x: hidden;
 }
 
-/* 🔥 THIS IS THE FIX */
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 10px;
-  font-size: 0.95rem;
+/* HERO */
+.hero img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
 }
 
 /* HERO TEXT */
-.hero h1 {
-  font-size: 2.8rem;
+.hero-text {
+  text-align: center;
+  padding: 30px;
 }
 
-.hero p {
-  margin-top: 5px;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
-/* WHATSAPP BUTTON */
-.whatsapp-btn {
-  display: inline-block;
-  margin-top: 20px;
+/* BUTTONS */
+.btn {
   padding: 12px 25px;
-  background: #25D366;
-  color: white;
   border-radius: 25px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
-.whatsapp-btn:hover {
-  background: #1ebe5d;
-  transform: scale(1.05);
+.primary {
+  background: gold;
+  color: black;
+}
+
+.secondary {
+  border: 1px solid white;
+  color: white;
 }
 
 /* SECTIONS */
 .section {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .section.dark {
   background: #111;
-  color: white;
 }
 
-/* GRID LAYOUT */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  max-width: 1200px;
-  margin: auto;
+  gap: 20px;
 }
 
-.grid img {
+/* CARDS */
+.card img {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 10px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
-.grid img:hover {
+.card:hover img {
   transform: scale(1.05);
 }
 
-/* RATES */
-.rates-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.rate-box {
-  background: white;
-  padding: 20px;
+/* BALLOON */
+.balloon-img {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
   border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.section.dark .rate-box {
+/* TRACKING */
+.tracking {
   background: #222;
-  color: white;
+  padding: 20px;
+  font-size: 14px;
 }
 
-/* BOOKING */
-.booking-box {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 400px;
-  margin: auto;
-}
-
-.booking-box input {
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-}
-
-.booking-box button {
-  padding: 12px;
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background: #25D366;
-  border: none;
+  padding: 15px;
+  border-radius: 50%;
   color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.booking-box button:hover {
-  background: #1ebe5d;
-}
-
-/* TESTIMONIALS */
-.testimonials {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.testimonial {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.section.dark .testimonial {
-  background: #222;
-  color: white;
-}
-
-/* FOOTER */
-.footer {
-  background: black;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  text-decoration: none;
 }
